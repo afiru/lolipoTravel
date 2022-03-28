@@ -1,7 +1,7 @@
 <div class="bg-white lg:pb-0">
     <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
         <header class="flex justify-between items-center py-0 md:py-0">
-            <a class="w-1/5" href="{{ route('dashboard') }}">
+            <a href="{{ route('dashboard') }}">
                 <img loading="lazy" src="/img/logo.svg" alt="行き先決定アプリ【どこいこ】" width="67" height="22" />
             </a>
             <nav class="lg:flex gap-12">
