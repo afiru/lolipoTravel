@@ -35,10 +35,10 @@
             <div class="flex items-center justify-end mt-4">
 
                 @if (Route::has('password.request'))
-                    <a class="underline inline-block text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
                         新規登録
                     </a>
-                    <a class="ml-4 inline-block underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                    <a class="ml-4　underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
                         パスワードを忘れた方はこちら
                     </a>
                 @endif
