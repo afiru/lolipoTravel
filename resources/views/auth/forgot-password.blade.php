@@ -1,30 +1,34 @@
 <x-guest-layout>
-    <div class="wapper loginFormWap">
-        <h1 class="h1LoinLogo">
-            <img loading="lazy" src="img/Logo.png" alt="" width="168" height="152" />
-        </h1>
+    <x-jet-authentication-card>
+        <x-slot name="logo">
+            <x-jet-authentication-card-logo />
+        </x-slot>
 
-        <div class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md loginFormCnt">
-            <p class="txtForgotPass">
-                {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
-            </p>
-            <div class="formForgotPass">
-                <form method="POST" action="{{ route('password.email') }}">
-                    @csrf
+        <div class="mb-4 text-sm text-gray-600">
+            パスワードを忘れた場合は、以下に登録メールアドレスを入力して送信してください。パスワード再発行リンクを送信します。
+        </div>
 
-                    <div class="block">
-                        <x-jet-label for="email" value="{{ __('Email') }}" />
-                        <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-                    </div>
+        @if (session('status'))
+            <div class="mb-4 font-medium text-sm text-green-600">
+                {{ session('status') }}
+            </div>
+        @endif
+        
+        <x-jet-validation-errors class="mb-4" />
 
-                    <div class="flex items-center justify-end loginFormChackButton">
-                        <x-jet-button>
-                            {{ __('Email Password Reset Link') }}
-                        </x-jet-button>
-                    </div>
-                </form>
+        <form method="POST" action="{{ route('password.email') }}">
+            @csrf
+
+            <div class="block">
+                <x-jet-label for="email" value="メールアドレス" />
+                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
-        </div>
-    </div>
+            <div class="flex items-center justify-end mt-4">
+                <x-jet-button>
+                    パスワード再発行リンクを送信する
+                </x-jet-button>
+            </div>
+        </form>
+    </x-jet-authentication-card>
 </x-guest-layout>
