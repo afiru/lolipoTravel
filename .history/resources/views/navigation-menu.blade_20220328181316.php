@@ -1,4 +1,4 @@
-<div class="lg-block pcheader bg-white">
+<div class="pc_only pcheader bg-white">
     <div class="max-w-screen-2xl px-1 md:px-1 mx-auto">
         <header class="flex justify-between items-center py-2 md:py-2">
             <a lass="inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5" aria-label="logo" href="{{ route('dashboard') }}">

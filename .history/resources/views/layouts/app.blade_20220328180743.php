@@ -12,7 +12,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-        <link rel="stylesheet" href="{{ mix('css/add.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         @livewireStyles
 
         <!-- Scripts -->

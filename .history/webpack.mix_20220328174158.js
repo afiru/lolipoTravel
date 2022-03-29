@@ -15,7 +15,8 @@ require('mix-tailwindcss');
  mix.js('resources/js/app.js', 'public/js')
  .sass('resources/scss/add.scss', 'public/css').tailwind()
  .postCss('resources/css/app.css', 'public/css', [
-         require('postcss-import')
+         require('postcss-import'),
+         require('tailwindcss'),
      ]);
 
 if (mix.inProduction()) {

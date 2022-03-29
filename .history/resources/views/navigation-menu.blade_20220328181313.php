@@ -1,4 +1,4 @@
-<div class="lg-block pcheader bg-white">
+<div class="pc_only pcheader bg-white">
     <div class="max-w-screen-2xl px-1 md:px-1 mx-auto">
         <header class="flex justify-between items-center py-2 md:py-2">
             <a lass="inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5" aria-label="logo" href="{{ route('dashboard') }}">
@@ -14,7 +14,7 @@
 
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-                    <button type="submit" class="inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 ml-3 px-4 py-1">LogOut</button>
+                    <button type="submit" class="inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 ml-3 px-2 py-1">LogOut</button>
                 </form>
               </div>
         </header>
